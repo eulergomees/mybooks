@@ -35,11 +35,20 @@ class HomeFragment : Fragment() {
         //Adapter
         binding.recyclerviewBooks.adapter = adapter
 
+        viewModel.getAllBooks()
+        setObserves()
+
         return binding.root
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    private fun setObserves() {
+        viewModel.books.observe(viewLifecycleOwner) {
+            adapter.updateBooks(it)
+        }
     }
 }

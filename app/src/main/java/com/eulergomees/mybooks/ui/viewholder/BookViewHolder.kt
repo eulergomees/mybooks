@@ -7,6 +7,6 @@ import com.eulergomees.mybooks.entity.BookEntity
 class BookViewHolder(private val _item: ItemBookBinding) : RecyclerView.ViewHolder(_item.root) {
 
     fun bind(book: BookEntity){
-
+        _item.textviewTitle.text = book.tittle
     }
 }

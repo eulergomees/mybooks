@@ -1,5 +1,6 @@
 package com.eulergomees.mybooks.ui.adapter
 
+import android.icu.text.ListFormatter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -9,7 +10,7 @@ import com.eulergomees.mybooks.ui.viewholder.BookViewHolder
 
 class BookAdapter : RecyclerView.Adapter<BookViewHolder>() {
 
-    private val bookList = mutableListOf<BookEntity>()
+    private var bookList: List<BookEntity> = listOf()
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
@@ -28,5 +29,9 @@ class BookAdapter : RecyclerView.Adapter<BookViewHolder>() {
 
     override fun getItemCount(): Int {
         return bookList.size
+    }
+
+    fun updateBooks(list:List<BookEntity>){
+        bookList = list
     }
 }
