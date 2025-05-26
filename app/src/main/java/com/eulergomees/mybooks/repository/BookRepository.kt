@@ -20,7 +20,7 @@ class BookRepository {
             BookEntity(6, "Crime e Castigo", "Fiódor Dostoiévski", false, "Ficção policial"),
             BookEntity(7, "Frankenstein", "Mary Shelley", false, "Terror"),
             BookEntity(8, "Harry Potter e a Pedra Filosofal", "J.K. Rowling", false, "Fantasia"),
-            BookEntity(9, "Neuromancer", "William Gibson", false, "Cyberpunk"),
+            BookEntity(9, "Neuromancer", "William Gibson", true, "Cyberpunk"),
             BookEntity(10, "Senhor dos Anéis", "J.R.R. Tolkien", false, "Fantasia"),
             BookEntity(11, "Drácula", "Bram Stoker", false, "Terror"),
             BookEntity(12, "Orgulho e Preconceito", "Jane Austen", false, "Romance"),

@@ -8,7 +8,9 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.eulergomees.mybooks.databinding.FragmentHomeBinding
+import com.eulergomees.mybooks.ui.adapter.BookAdapter
 import com.eulergomees.mybooks.viewmodels.HomeViewModel
 
 class HomeFragment : Fragment() {
@@ -20,6 +22,7 @@ class HomeFragment : Fragment() {
     private val binding get() = _binding!!
 
     private val viewModel: HomeViewModel by viewModels()
+    private val adapter: BookAdapter = BookAdapter()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -27,6 +30,10 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
+
+        binding.recyclerviewBooks.layoutManager = LinearLayoutManager(context)
+        //Adapter
+        binding.recyclerviewBooks.adapter = adapter
 
         return binding.root
     }
