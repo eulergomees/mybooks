@@ -1,23 +1,19 @@
 <resources>
 
-    <!-- Nome do aplicativo -->
     <string name="app_name">MyBooks</string>
 
-    <!-- Títulos das telas -->
     <string name="title_home">Home</string>
     <string name="title_favorites">Favorites</string>
     <string name="title_book_details">Details</string>
 
-    <!-- Mensagens dos diálogos -->
     <string name="dialog_message_delete_item">You really want to delete this item?</string>
     <string name="dialog_positive_button_yes">Yes</string>
     <string name="dialog_negative_button_no">No</string>
 
-    <!-- Mensagens de sucesso e erro -->
     <string name="msg_removed_successfully">Successful remove item!</string>
     <string name="msg_no_books">You dont have a favorite book!</string>
 
-    <!-- Botões e descrições -->
     <string name="button_remove_book">Remove book</string>
     <string name="desc_book_image">Books image</string>
+    <string name="image_desc_favorite">Favorite</string>
 </resources>
