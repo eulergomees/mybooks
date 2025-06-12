@@ -1,4 +1,4 @@
-package com.eulergomees.mybooks
+package com.eulergomees.mybooks.ui
 
 import androidx.fragment.app.viewModels
 import android.os.Bundle
@@ -7,7 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.eulergomees.mybooks.databinding.FragmentDetailsBinding
-import com.eulergomees.mybooks.databinding.FragmentHomeBinding
+import com.eulergomees.mybooks.viewmodel.DetailsViewModel
 
 class DetailsFragment : Fragment() {
 

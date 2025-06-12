@@ -1,16 +1,20 @@
 package com.eulergomees.mybooks.ui.viewholder
 
+import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import com.eulergomees.mybooks.R
 import com.eulergomees.mybooks.databinding.ItemBookBinding
 import com.eulergomees.mybooks.entity.BookEntity
+import com.eulergomees.mybooks.ui.listener.BookListener
 
-class BookViewHolder(private val item: ItemBookBinding) : RecyclerView.ViewHolder(item.root) {
+class BookViewHolder(private val item: ItemBookBinding, private val listener: BookListener) :
+    RecyclerView.ViewHolder(item.root) {
 
     fun bind(book: BookEntity) {
         item.textviewTitle.text = book.tittle
         item.textviewAuthor.text = book.author
         item.textviewGenre.text = book.genre
+        item.textviewTitle.setOnClickListener { listener.onClick(book.id) }
 
         setGenreBackgroud(book.genre)
         updateFavoriteIcon(book.favorite)

@@ -1,4 +1,4 @@
-package com.eulergomees.mybooks
+package com.eulergomees.mybooks.viewmodel
 
 import androidx.lifecycle.ViewModel
 
