@@ -11,7 +11,7 @@ class BookViewHolder(private val item: ItemBookBinding, private val listener: Bo
     RecyclerView.ViewHolder(item.root) {
 
     fun bind(book: BookEntity) {
-        item.textviewTitle.text = book.tittle
+        item.textviewTitle.text = book.title
         item.textviewAuthor.text = book.author
         item.textviewGenre.text = book.genre
         item.textviewTitle.setOnClickListener { listener.onClick(book.id) }

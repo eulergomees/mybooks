@@ -10,6 +10,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.eulergomees.mybooks.R
 import com.eulergomees.mybooks.databinding.FragmentHomeBinding
+import com.eulergomees.mybooks.helper.BookConstant
 import com.eulergomees.mybooks.ui.adapter.BookAdapter
 import com.eulergomees.mybooks.ui.listener.BookListener
 import com.eulergomees.mybooks.viewmodel.HomeViewModel
@@ -59,7 +60,9 @@ class HomeFragment : Fragment() {
     private fun attachListener() {
         adapter.attachListener(object : BookListener{
             override fun onClick(id: Int) {
-               findNavController().navigate(R.id.navigation_details)
+                val bundle = Bundle()
+                bundle.putInt(BookConstant.KEY.BOOK_ID, id)
+               findNavController().navigate(R.id.navigation_details, bundle)
             }
         })
     }
